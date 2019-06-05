@@ -1,17 +1,16 @@
 import React from 'react'
-import './SideBar.css'
+import './SideBarMain.css'
 
-class SideBar extends React.Component {
+class SideBarMain extends React.Component {
+    
     render () {
+        const folderList = this.props.allFolders.map((folder, key) => 
+            <li key={key}>{folder.name}</li>)
+            
         return (
             <div className="folder-container">
                 <ul className="folder-list">
-                    <li>test</li>
-                    <li>test2</li>
-                    <li>test</li>
-                    <li>test2</li>
-                    <li>test</li>
-                    <li>test2</li>
+                    {folderList}
                 </ul>
                 {/* probably will be changed to <Link></Link>, will have it's own add folder component eventually */}
                 <div className="add-folder-button">Add Folder</div>
@@ -20,4 +19,8 @@ class SideBar extends React.Component {
     }
 }
 
-export default SideBar
+SideBarMain.defaultProps = {
+    folder: []
+}
+
+export default SideBarMain

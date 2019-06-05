@@ -1,16 +1,19 @@
 import React from 'react'
-import './NoteList.css'
+import './NoteListMain.css'
+import Note from '../Note/Note.js'
 
-class NoteList extends React.Component {
+class NoteListMain extends React.Component {
     render () {
+        console.log(this.props.allNotes)
+
+        const noteList = this.props.allNotes.map((note, key) => 
+            <Note key={key} note={note}/> )
+
         return (
             <section id="main-display">
                 <ul className="notes-list">
                     {/* each note displayed with Note component, will contain delete component */}
-                    <li>note 1</li>
-                    <li>note 1</li>
-                    <li>note 1</li>
-                    <li>note 1</li>
+                    {noteList}
                 </ul>
                 <div className="add-note-button">Add Note</div>
             </section>
@@ -18,4 +21,4 @@ class NoteList extends React.Component {
     }
 }
 
-export default NoteList
+export default NoteListMain

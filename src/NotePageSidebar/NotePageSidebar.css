@@ -1,0 +1,16 @@
+.folder-container {
+    border-right: 1px solid black;
+    width: 25vw;
+    height: 100vh
+}
+
+.folder-list {
+    list-style: none;
+    margin: 2px;
+}
+
+.go-back-button {
+    border: 1px solid black;
+    margin: 20px;
+    text-align: center;
+}

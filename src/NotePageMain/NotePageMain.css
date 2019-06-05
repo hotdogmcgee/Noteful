@@ -1,0 +1,10 @@
+.select-note-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding-left: 40px
+}
+
+li {
+    list-style: none
+}
